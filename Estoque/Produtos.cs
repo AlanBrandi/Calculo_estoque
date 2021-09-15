@@ -11,13 +11,14 @@ namespace Estoque
         public string Nome;
         public double Preco;
         public int Quantidade;
-        //Adicionando um construtor padrão.
+        //Adicionando um construtor personalizado.
         public Produtos (string nome, double preco, int quantidade)
         {
             Nome = nome;
             Preco = preco;
             Quantidade = quantidade;
         }
+        //Adicionando um construtor padrão.
         public Produtos()
         {
 
