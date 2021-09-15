@@ -18,6 +18,10 @@ namespace Estoque
             Preco = preco;
             Quantidade = quantidade;
         }
+        public Produtos()
+        {
+
+        }
         //Calculo do valor total em estoque.
         public double ValorTotalEmEstoque()
         {
