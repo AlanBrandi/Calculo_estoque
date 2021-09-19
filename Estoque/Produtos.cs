@@ -9,10 +9,20 @@ namespace Estoque
     {
         //Declarando variáveis.
         private string Nome;
-        private double Preco;
-        private int Quantidade;
+        //declarando variável utilizando o auto properties.
+        private double Preco
+        {
+            get;
+            set;
+        }
+        private int Quantidade
+        {
+            get;
+            set;
+        }
+
         //Adicionando um construtor personalizado.
-        public Produtos (string nome, double preco, int quantidade)
+        public Produtos(string nome, double preco, int quantidade)
         {
             Nome = nome;
             Preco = preco;
@@ -23,34 +33,51 @@ namespace Estoque
         {
 
         }
-
-        //Get e Set do nomo, assim usando, encapsulamento.
-        public void SetNome(string nome)
+        //Utilização do properties C#
+        //Properties Nome.
+        public string _Nome
         {
-            Nome = nome;
+            get
+            {
+                return Nome;
+            }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    Nome = value;
+                }
+            }
         }
-        public string GetNome()
+        //Properties Preço.
+        public double _Preco
         {
-            return Nome;
+            get
+            {
+                return Preco;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    Preco = value;
+                }
+            }
         }
-        //GET e SET quantidade.
-        public void SetQuantidade(int quantidade)
+        //Properties Quantidade.
+        public int _Quantidade
         {
-            Quantidade = quantidade;
-        }
-        public int GetQuantidade()
-        {
-            return Quantidade;
-        }
-        //GET e SET preço.
-       
-        public void SetPreco(double preco)
-        {
-            Preco = preco;
-        }
-        public double GetPreco()
-        {
-            return Preco;
+            get
+            {
+                return Quantidade;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    Preco = value;
+                }
+            }
         }
 
 
