@@ -19,7 +19,6 @@ namespace Estoque
 
             //Declarando e instanciando objeto Produtos.
             Produtos p = new Produtos(nome, preco, quantidade);
-            Produtos p = new Produtos (nome, quantidade);
 
             //Demonstrando para o usuário seus resultados já somados.
             Console.WriteLine("Dados do produto: " + p);

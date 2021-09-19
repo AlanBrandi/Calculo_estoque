@@ -8,9 +8,9 @@ namespace Estoque
     class Produtos
     {
         //Declarando variáveis.
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
+        private string Nome;
+        private double Preco;
+        private int Quantidade;
         //Adicionando um construtor personalizado.
         public Produtos (string nome, double preco, int quantidade)
         {
@@ -23,6 +23,37 @@ namespace Estoque
         {
 
         }
+
+        //Get e Set do nomo, assim usando, encapsulamento.
+        public void SetNome(string nome)
+        {
+            Nome = nome;
+        }
+        public string GetNome()
+        {
+            return Nome;
+        }
+        //GET e SET quantidade.
+        public void SetQuantidade(int quantidade)
+        {
+            Quantidade = quantidade;
+        }
+        public int GetQuantidade()
+        {
+            return Quantidade;
+        }
+        //GET e SET preço.
+       
+        public void SetPreco(double preco)
+        {
+            Preco = preco;
+        }
+        public double GetPreco()
+        {
+            return Preco;
+        }
+
+
         //Calculo do valor total em estoque.
         public double ValorTotalEmEstoque()
         {
